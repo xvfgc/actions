@@ -18,4 +18,7 @@ jobs:
           use-cache: false
 
       - name: Run test
-        run: zig run ./foo.zig
+        run: |
+         ls
+         pwd
+         zig run ./foo.zig
