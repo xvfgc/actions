@@ -11,3 +11,11 @@ jobs:
     steps:
       - name: Print Hello World
         run: 'echo "Hello World"'
+
+      - uses: mlugg/setup-zig@v2
+        with:
+          version: 0.15.2
+          use-cache: false
+
+      - name: Run test
+        run: zig run ./foo.zig
